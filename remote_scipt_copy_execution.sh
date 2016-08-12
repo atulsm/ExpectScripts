@@ -11,7 +11,7 @@ set pass [lindex $argv 2]
 set script [lindex $argv 3]
 set params [lindex $argv 4]
 
-set timeout 6000
+set timeout -1
 
 #First copy the script from local folder
 spawn scp $script $user@$ip:/tmp/
