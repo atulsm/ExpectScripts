@@ -1,5 +1,6 @@
 #!/usr/bin/expect
 
+# @author  : atulsm@gmail.com
 # This script will execute ls command on a desired remote folder
 # Sample use:  ./remote_cmd_execution.sh 10.10.10.1 root password "ls /tmp"   
 

@@ -1,5 +1,6 @@
 #!/usr/bin/expect
 
+# @author  : atulsm@gmail.com
 # This script will execute any command on a remote machine and come back
 # Sample use:  
 #	./remote_cmd_execution.sh 10.10.10.1 root password "ls /tmp"   
