@@ -3,12 +3,15 @@
 # @author  : atulsm@gmail.com
 # This script will execute any script after copying to a remote machine
 # Sample use:  
-#	./remote_script_copy_execution.sh 10.10.10.1 root password "sample.sh"   
+#	./remote_script_copy_execution.sh 10.10.10.1 root password sample.sh "params"  
 
 set ip [lindex $argv 0]
 set user [lindex $argv 1]
 set pass [lindex $argv 2]
 set script [lindex $argv 3]
+set params [lindex $argv 4]
+
+set timeout 6000
 
 #First copy the script from local folder
 spawn scp $script $user@$ip:/tmp/
@@ -38,7 +41,7 @@ expect {
 }
 
 expect "#"
-send -- "/tmp/$script\r"
+send -- "/tmp/$script $params\r"
 
 expect "#"
 send -- "quit\r"
